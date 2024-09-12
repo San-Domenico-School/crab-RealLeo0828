@@ -18,5 +18,10 @@ public class CrabWorld extends World
         // instantiate new objects
         addObject(crab, 150,100);
         // add them to the world
+        // Fruit experiment
+        Fruit fruit = new Fruit( );
+        addObject(fruit, 100, 100);
+
+
     }
 }
