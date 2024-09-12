@@ -1,12 +1,15 @@
 #Greenfoot project file
 class.Crab.image=crab.png
 class.CrabWorld.image=sand.jpg
+dependency1.from=CrabWorld
+dependency1.to=Crab
+dependency1.type=UsesDependency
 editor.fx.0.height=728
-editor.fx.0.width=800
+editor.fx.0.width=799
 editor.fx.0.x=366
 editor.fx.0.y=154
 height=764
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 project.charset=UTF-8
 publish.hasSource=false
@@ -40,5 +43,5 @@ target2.y=10
 version=3.1.0
 width=834
 world.lastInstantiated=CrabWorld
-xPosition=535
-yPosition=86
+xPosition=382
+yPosition=99

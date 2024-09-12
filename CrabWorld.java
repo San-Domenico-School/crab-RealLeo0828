@@ -14,10 +14,9 @@ public class CrabWorld extends World
     
     private void prepareScene()
     {
-        System.out.println("\"Hello World\"");
-
+        Crab crab = new Crab( );
         // instantiate new objects
-        
+        addObject(crab, 150,100);
         // add them to the world
     }
 }
