@@ -7,9 +7,14 @@ import greenfoot.*;
  */
 public class Crab extends Actor
 {
-    // Always place fields first in the class.
+    public void act()
+    {
+        move(3);
+    }// Always place fields first in the class.
     
-    // After the fields place the behaviors
+    public void faceDown()
+    {
+        turn(90);
+    }
 }
-
 
