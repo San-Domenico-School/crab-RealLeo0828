@@ -15,11 +15,8 @@ public class CrabWorld extends World
     private void prepareScene()
     {
        addPlayer();
-       addFood();
-       addEnemy();
-        System.out.println(Greenfoot.getRandomNumber(10));
-        System.out.println(Greenfoot.getRandomNumber(10)); 
-        System.out.println(Greenfoot.getRandomNumber(10));
+       addworm();
+       addlobster();
     }
     
     private void addPlayer()
@@ -27,21 +24,34 @@ public class CrabWorld extends World
         
         
         Crab crab = new Crab( );
-        
+    
         // instantiate new objects
         addObject(crab, 470,100);
         // add them to the world
         
-        crab.faceDown();
+    
     }
     
-    private void addFood()
+    private void addworm()
     {
-        System.out.println("Food added");
+        Worm worm = new Worm();
+        addObject(worm, 100,100);
+        Worm worm1 = new Worm();
+        addObject(worm, 100,100);
+        Worm worm2 = new Worm();
+        addObject(worm, 100,100);
+        Worm worm3 = new Worm();
+        addObject(worm, 100,100);
+        addObject(worm1, 200,100);
+        addObject(worm2, 200,200);
+        addObject(worm3, 300,400);
+        System.out.println("worms added");
     }
     
-    private void addEnemy()
+    private void addlobster()
     {
-        System.out.println("Enemy added");
+        Lobster lobster = new Lobster();
+        System.out.println("lobster added");
+        addObject(lobster, 550, 270);
     }
 }
