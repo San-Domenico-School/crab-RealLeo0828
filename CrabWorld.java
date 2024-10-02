@@ -1,57 +1,40 @@
-import greenfoot.*;  // (Actor, World, Greenfoot, GreenfootImage)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class CrabWorld extends World
 {
-    /**
-     * Create the crab world (the beach). Our world has a size 
-     * of 560x560 cells, where every cell is just 1 pixel.
-     */
-    public CrabWorld() 
-    {
-        super(560, 560, 1);
-        prepareScene();
-    }
-    
-    private void prepareScene()
-    {
-       addPlayer();
-       addworm();
-       addlobster();
-    }
-    
-    private void addPlayer()
-    {
-        
-        
-        Crab crab = new Crab( );
-    
-        // instantiate new objects
-        addObject(crab, 470,100);
-        // add them to the world
-        
-    
-    }
-    
-    private void addworm()
-    {
-        Worm worm = new Worm();
-        addObject(worm, 100,100);
-        Worm worm1 = new Worm();
-        addObject(worm, 100,100);
-        Worm worm2 = new Worm();
-        addObject(worm, 100,100);
-        Worm worm3 = new Worm();
-        addObject(worm, 100,100);
-        addObject(worm1, 200,100);
-        addObject(worm2, 200,200);
-        addObject(worm3, 300,400);
-        System.out.println("worms added");
-    }
-    
-    private void addlobster()
-    {
+    private int numberOfWorms = 10;  // Set the number of worms you want to generate
+
+    public CrabWorld()
+    {    
+        // Create a new world with 600x400 cells, each 1x1 pixels
+        super(600, 600, 1);  
+
+        // Add the crab at the center of the world
+        Crab crab = new Crab();
+        addObject(crab, getWidth()/2, getHeight()/2);
+
+        // Add the lobster
         Lobster lobster = new Lobster();
-        System.out.println("lobster added");
-        addObject(lobster, 550, 270);
+        addObject(lobster, getWidth() - 50, getHeight()/2);  // Position the lobster somewhere on the right
+
+        // Generate the worms at random positions
+        generateWorms(numberOfWorms);
+    }
+
+    // Method to generate worms randomly in the world
+    public void generateWorms(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            // Create a new worm
+            Worm worm = new Worm();
+
+            // Randomly position the worm in the world
+            int x = Greenfoot.getRandomNumber(getWidth());  // Random x position
+            int y = Greenfoot.getRandomNumber(getHeight()); // Random y position
+
+            // Add the worm to the world at the random position
+            addObject(worm, x, y);
+        }
     }
 }
