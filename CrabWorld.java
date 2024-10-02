@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+/**
+ * This class defines CrabWorld
+ * @author Leo
+ * @version 10/1/2024
+ */
 public class CrabWorld extends World
 {
     private int numberOfWorms = 10;  // Set the number of worms you want to generate

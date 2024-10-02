@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+/**
+ * This defines Lobster
+ * @author Leo
+ * @version 10/1/24
+ */
 public class Lobster extends Actor
 {
     private int speed = 7;  // Default speed of the lobster

@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+/**
+ * This class defines a crab. Crabs live on the beach.
+ * @author Leo
+ * @version 10/1/2024
+ */
 public class Crab extends Actor
 {
     private int speed = 5;       // Default speed
