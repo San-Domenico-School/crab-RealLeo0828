@@ -71,7 +71,7 @@ public class Crab extends Actor
         {
             removeTouching(Worm.class);  // Remove the worm that the crab touched
             wormsEaten++;  // Increment the number of worms eaten
-            Geenfoot.playsound()
+            Greenfoot.playSound("chime.wav");
             // Notify the lobster to increase speed
             Lobster lobster = (Lobster) getWorld().getObjects(Lobster.class).get(0);
             lobster.increaseSpeed();
@@ -85,7 +85,7 @@ public class Crab extends Actor
         {
             // Display "Game Over!" on the screen
             getWorld().showText("You Lose!", getWorld().getWidth() / 2, getWorld().getHeight() / 2);
-            
+            Greenfoot.playSound("slurp.wav");
             // Stop the game
             Greenfoot.stop();
         }
@@ -98,7 +98,7 @@ public class Crab extends Actor
         {
             // Display "You Win!" on the screen
             getWorld().showText("You Win!", getWorld().getWidth() / 2, getWorld().getHeight() / 2);
-
+            Greenfoot.playSound("fanfare.wav");
             // Stop the game
             Greenfoot.stop();
         }
